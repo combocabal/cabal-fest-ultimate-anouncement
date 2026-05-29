@@ -195,9 +195,9 @@ body{
 .s-ic{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--text2);font-size:16px;pointer-events:none;}
 
 /* ── TABLE ── */
-.tbl-wrap{background:var(--surface);border:1px solid var(--border);border-radius:4px;overflow:hidden;}
+.tbl-wrap{background:var(--surface);border:1px solid var(--border);border-radius:4px;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;}
 .tbl-bar{height:2px;background:linear-gradient(90deg,var(--teal) 0%,var(--cyan) 50%,var(--teal) 100%);}
-table{width:100%;border-collapse:collapse;font-size:14px;}
+table{width:100%;min-width:520px;border-collapse:collapse;font-size:14px;}
 thead tr{background:var(--surface2);border-bottom:1px solid var(--border);}
 th{font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.3px;color:var(--text2);text-transform:uppercase;padding:14px 18px;text-align:left;}
 th:first-child{width:48px;text-align:center;}
@@ -302,17 +302,7 @@ td:first-child{text-align:center;font-family:'JetBrains Mono',monospace;font-siz
   th,td{padding:10px 10px;}
   th{font-size:11px;}
 
-  /* Tournament: hide Account ID (col 3) */
-  table[data-type="tournament"] th:nth-child(3),
-  table[data-type="tournament"] td:nth-child(3){display:none;}
-
-  /* Winner: hide Account ID (col 4) */
-  table[data-type="winner"] th:nth-child(4),
-  table[data-type="winner"] td:nth-child(4){display:none;}
-
-  /* Lucky Draw: hide Account ID (col 3) */
-  table[data-type="lucky"] th:nth-child(3),
-  table[data-type="lucky"] td:nth-child(3){display:none;}
+  /* Account ID columns shown — table scrolls horizontally on mobile */
 
   /* Claim button — compact */
   .lnk{padding:6px 10px;font-size:11px;}
